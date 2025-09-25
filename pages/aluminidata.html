@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Alumni | Student-Alumni Platform</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <link rel="stylesheet" href="../assests/css/components.css">
+    <link rel="stylesheet" href="../assests/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./auth.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="alumhome.html" style="color: white; text-decoration: none;">AlumniConnect</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="aluminiconnect.html" class="nav-link">Alumni Connect</a>
+                </li>
+                <li class="nav-item">
+                    <a href="roadmap.html" class="nav-link">Roadmap</a>
+                </li>
+                <li class="nav-item">
+                    <a href="internship.html" class="nav-link">Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aluminidata.html" class="nav-link">Top Alumni</a>
+                </li>
+                <li class="nav-item">
+                    <button class="auth-btn" onclick="openAuthModal()">Login/Register</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-header-text">
+                    <h1>Top Alumni</h1>
+                    <p>Meet our most successful and influential alumni who are making a difference in their industries</p>
+                </div>
+                <a href="alumhome.html" class="btn-home">
+                    <i class="fas fa-home"></i> Return to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Alumni Section -->
+    <section class="featured-alumni">
+        <div class="container">
+            <h2 class="section-title">Featured Alumni</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p class="featured-title">VP of Engineering</p>
+                        <p class="featured-company">Google</p>
+                        <div class="featured-achievements">
+                            <div class="achievement">
+                                <i class="fas fa-trophy"></i>
+                                <span>15+ years in tech</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-users"></i>
+                                <span>Mentored 200+ students</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-star"></i>
+                                <span>Industry recognition</span>
+                            </div>
+                        </div>
+                        <p class="featured-bio">
+                            "I started my journey as a computer science student and now lead engineering teams at Google. 
+                            My passion is helping the next generation of developers succeed."
+                        </p>
+                        <div class="featured-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Michael Chen</h3>
+                        <p class="featured-title">Chief Product Officer</p>
+                        <p class="featured-company">Microsoft</p>
+                        <div class="featured-achievements">
+                            <div class="achievement">
+                                <i class="fas fa-trophy"></i>
+                                <span>12+ years in product</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-users"></i>
+                                <span>Built 5+ successful products</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-star"></i>
+                                <span>Product innovation award</span>
+                            </div>
+                        </div>
+                        <p class="featured-bio">
+                            "Product management is about understanding users and solving real problems. I love sharing 
+                            my experiences to help aspiring product managers."
+                        </p>
+                        <div class="featured-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="featured-info">
+                        <h3>Emily Rodriguez</h3>
+                        <p class="featured-title">Head of Data Science</p>
+                        <p class="featured-company">Amazon</p>
+                        <div class="featured-achievements">
+                            <div class="achievement">
+                                <i class="fas fa-trophy"></i>
+                                <span>10+ years in data science</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-users"></i>
+                                <span>Led 50+ data projects</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-star"></i>
+                                <span>Published researcher</span>
+                            </div>
+                        </div>
+                        <p class="featured-bio">
+                            "Data science is transforming every industry. I'm excited to guide students through their 
+                            journey in this rapidly evolving field."
+                        </p>
+                        <div class="featured-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Categories -->
+    <section class="alumni-categories">
+        <div class="container">
+            <h2 class="section-title">Alumni by Industry</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p class="category-count">150+ Alumni</p>
+                    <p class="category-description">Software engineers, developers, and tech leaders from top companies</p>
+                    <div class="category-companies">
+                        <span class="company-tag">Google</span>
+                        <span class="company-tag">Microsoft</span>
+                        <span class="company-tag">Apple</span>
+                        <span class="company-tag">Amazon</span>
+                    </div>
+                    <button class="btn-secondary">View Alumni</button>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Finance</h3>
+                    <p class="category-count">80+ Alumni</p>
+                    <p class="category-description">Investment bankers, analysts, and financial advisors</p>
+                    <div class="category-companies">
+                        <span class="company-tag">Goldman Sachs</span>
+                        <span class="company-tag">JP Morgan</span>
+                        <span class="company-tag">Morgan Stanley</span>
+                        <span class="company-tag">BlackRock</span>
+                    </div>
+                    <button class="btn-secondary">View Alumni</button>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design</h3>
+                    <p class="category-count">60+ Alumni</p>
+                    <p class="category-description">UX/UI designers, graphic designers, and creative directors</p>
+                    <div class="category-companies">
+                        <span class="company-tag">Adobe</span>
+                        <span class="company-tag">Figma</span>
+                        <span class="company-tag">Airbnb</span>
+                        <span class="company-tag">Spotify</span>
+                    </div>
+                    <button class="btn-secondary">View Alumni</button>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Consulting</h3>
+                    <p class="category-count">45+ Alumni</p>
+                    <p class="category-description">Management consultants and business strategists</p>
+                    <div class="category-companies">
+                        <span class="company-tag">McKinsey</span>
+                        <span class="company-tag">BCG</span>
+                        <span class="company-tag">Bain</span>
+                        <span class="company-tag">Deloitte</span>
+                    </div>
+                    <button class="btn-secondary">View Alumni</button>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p class="category-count">35+ Alumni</p>
+                    <p class="category-description">Doctors, researchers, and healthcare technology leaders</p>
+                    <div class="category-companies">
+                        <span class="company-tag">Mayo Clinic</span>
+                        <span class="company-tag">Johns Hopkins</span>
+                        <span class="company-tag">Medtronic</span>
+                        <span class="company-tag">Johnson & Johnson</span>
+                    </div>
+                    <button class="btn-secondary">View Alumni</button>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p class="category-count">25+ Alumni</p>
+                    <p class="category-description">Professors, researchers, and education technology leaders</p>
+                    <div class="category-companies">
+                        <span class="company-tag">Stanford</span>
+                        <span class="company-tag">MIT</span>
+                        <span class="company-tag">Harvard</span>
+                        <span class="company-tag">Coursera</span>
+                    </div>
+                    <button class="btn-secondary">View Alumni</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Metrics -->
+    <section class="success-metrics">
+        <div class="container">
+            <h2 class="section-title">Alumni Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>500+</h3>
+                    <p>Companies Represented</p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>50+</h3>
+                    <p>Countries</p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>2,000+</h3>
+                    <p>Students Mentored</p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>100+</h3>
+                    <p>Industry Awards</p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>500+</h3>
+                    <p>Patents Filed</p>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>$2B+</h3>
+                    <p>Companies Founded</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Stories -->
+    <section class="alumni-stories">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The mentorship I received from alumni was instrumental in my career growth. They helped me 
+                        navigate the transition from student to professional and provided invaluable industry insights."</p>
+                        <div class="story-author">
+                            <div class="author-photo">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>David Kim</h4>
+                                <p>Senior Software Engineer at Netflix</p>
+                                <span class="story-year">Class of 2018</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Through the alumni network, I found my first job and built connections that have lasted 
+                        throughout my career. The community support is incredible."</p>
+                        <div class="story-author">
+                            <div class="author-photo">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Lisa Wang</h4>
+                                <p>Product Manager at Airbnb</p>
+                                <span class="story-year">Class of 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <div class="story-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The alumni network opened doors I never knew existed. Their guidance helped me start my 
+                        own company and become a successful entrepreneur."</p>
+                        <div class="story-author">
+                            <div class="author-photo">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Alex Thompson</h4>
+                                <p>Founder & CEO at TechStart</p>
+                                <span class="story-year">Class of 2017</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Our Alumni Network</h2>
+                <p>Connect with successful alumni and accelerate your career growth</p>
+                <button class="btn-primary" onclick="openAuthModal()">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AlumniConnect</h3>
+                    <p>Bridging the gap between students and alumni for a brighter future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="aluminiconnect.html">Alumni Connect</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="internship.html">Internships</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AlumniConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                    <button class="tab-btn" onclick="switchTab('register')">Register</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="loginForm" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Login</button>
+                    </form>
+                    <p class="auth-switch">Don't have an account? <a href="#" onclick="switchTab('register')">Register here</a></p>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="auth-form">
+                    <h2>Create Account</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="regName">Full Name</label>
+                            <input type="text" id="regName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail">Email</label>
+                            <input type="email" id="regEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Password</label>
+                            <input type="password" id="regPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regConfirmPassword">Confirm Password</label>
+                            <input type="password" id="regConfirmPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">I am a:</label>
+                            <select id="userType" required>
+                                <option value="">Select</option>
+                                <option value="student">Student</option>
+                                <option value="alumni">Alumni</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Register</button>
+                    </form>
+                    <p class="auth-switch">Already have an account? <a href="#" onclick="switchTab('login')">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Roadmap | Student-Alumni Platform</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <link rel="stylesheet" href="../assests/css/components.css">
+    <link rel="stylesheet" href="../assests/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./auth.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="alumhome.html" style="color: white; text-decoration: none;">AlumniConnect</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="aluminiconnect.html" class="nav-link">Alumni Connect</a>
+                </li>
+                <li class="nav-item">
+                    <a href="roadmap.html" class="nav-link">Roadmap</a>
+                </li>
+                <li class="nav-item">
+                    <a href="internship.html" class="nav-link">Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aluminidata.html" class="nav-link">Top Alumni</a>
+                </li>
+                <li class="nav-item">
+                    <button class="auth-btn" onclick="openAuthModal()">Login/Register</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-header-text">
+                    <h1>Career Roadmap</h1>
+                    <p>Follow a structured path to your dream career with guidance from successful alumni</p>
+                </div>
+                <a href="alumhome.html" class="btn-home">
+                    <i class="fas fa-home"></i> Return to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" id="roadmapSearch" placeholder="Search roadmaps by career path (e.g., full stack, data science, design)...">
+                    <button class="search-btn" onclick="searchRoadmaps()">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Paths</button>
+                    <button class="filter-tab" data-filter="full-stack">Full Stack</button>
+                    <button class="filter-tab" data-filter="data-science">Data Science</button>
+                    <button class="filter-tab" data-filter="design">Design</button>
+                    <button class="filter-tab" data-filter="product">Product Management</button>
+                    <button class="filter-tab" data-filter="marketing">Marketing</button>
+                    <button class="filter-tab" data-filter="cybersecurity">Cybersecurity</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Timeline -->
+    <section class="roadmap-section">
+        <div class="roadmap-container">
+            <div class="roadmap-timeline" id="roadmapTimeline">
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Foundation Phase</h3>
+                        <p class="roadmap-duration">Months 1-6</p>
+                        <p class="roadmap-description">
+                            Build fundamental skills and knowledge in your chosen field. Focus on core concepts, 
+                            basic tools, and understanding industry standards.
+                        </p>
+                        <div class="roadmap-skills">
+                            <span class="roadmap-skill">Basic Programming</span>
+                            <span class="roadmap-skill">Industry Tools</span>
+                            <span class="roadmap-skill">Problem Solving</span>
+                            <span class="roadmap-skill">Communication</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                </div>
+
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Skill Development</h3>
+                        <p class="roadmap-duration">Months 7-12</p>
+                        <p class="roadmap-description">
+                            Deepen your expertise in specific areas. Work on projects, contribute to open source, 
+                            and start building a portfolio of your work.
+                        </p>
+                        <div class="roadmap-skills">
+                            <span class="roadmap-skill">Advanced Concepts</span>
+                            <span class="roadmap-skill">Project Management</span>
+                            <span class="roadmap-skill">Version Control</span>
+                            <span class="roadmap-skill">Testing</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Practical Experience</h3>
+                        <p class="roadmap-duration">Months 13-18</p>
+                        <p class="roadmap-description">
+                            Gain real-world experience through internships, freelance projects, or personal ventures. 
+                            Apply your skills in professional settings.
+                        </p>
+                        <div class="roadmap-skills">
+                            <span class="roadmap-skill">Internships</span>
+                            <span class="roadmap-skill">Freelance Work</span>
+                            <span class="roadmap-skill">Team Collaboration</span>
+                            <span class="roadmap-skill">Client Communication</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                </div>
+
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Specialization</h3>
+                        <p class="roadmap-duration">Months 19-24</p>
+                        <p class="roadmap-description">
+                            Choose a specific niche or specialization within your field. Become an expert in 
+                            particular technologies or methodologies.
+                        </p>
+                        <div class="roadmap-skills">
+                            <span class="roadmap-skill">Specialized Tools</span>
+                            <span class="roadmap-skill">Industry Certifications</span>
+                            <span class="roadmap-skill">Advanced Techniques</span>
+                            <span class="roadmap-skill">Mentoring Others</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Leadership & Growth</h3>
+                        <p class="roadmap-duration">Months 25-30</p>
+                        <p class="roadmap-description">
+                            Develop leadership skills, take on more responsibility, and start mentoring others. 
+                            Focus on career advancement and long-term goals.
+                        </p>
+                        <div class="roadmap-skills">
+                            <span class="roadmap-skill">Team Leadership</span>
+                            <span class="roadmap-skill">Strategic Thinking</span>
+                            <span class="roadmap-skill">Mentoring</span>
+                            <span class="roadmap-skill">Industry Networking</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+
+                <div class="roadmap-item">
+                    <div class="roadmap-content">
+                        <h3 class="roadmap-title">Expert Level</h3>
+                        <p class="roadmap-duration">Months 31+</p>
+                        <p class="roadmap-description">
+                            Become a recognized expert in your field. Contribute to industry discussions, 
+                            speak at conferences, and help shape the future of your profession.
+                        </p>
+                        <div class="roadmap-skills">
+                            <span class="roadmap-skill">Thought Leadership</span>
+                            <span class="roadmap-skill">Public Speaking</span>
+                            <span class="roadmap-skill">Industry Innovation</span>
+                            <span class="roadmap-skill">Mentoring Alumni</span>
+                        </div>
+                    </div>
+                    <div class="roadmap-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Paths Section -->
+    <section class="career-paths">
+        <div class="container">
+            <h2 class="section-title">Choose Your Career Path</h2>
+            <div class="paths-grid" id="careerPathsGrid">
+                <div class="path-card" data-path="full-stack" data-keywords="software development, full stack, web development, programming, javascript, react, node">
+                    <div class="path-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Full Stack Development</h3>
+                    <p>Full-stack development, mobile apps, web applications, and system architecture.</p>
+                    <ul class="path-skills">
+                        <li>Programming Languages</li>
+                        <li>Frameworks & Libraries</li>
+                        <li>Database Management</li>
+                        <li>DevOps & Deployment</li>
+                    </ul>
+                <a href="https://www.w3schools.com/"><button class="btn-primary">Start This Path</button></a>
+                </div>
+
+                <div class="path-card" data-path="data-science" data-keywords="data science, machine learning, artificial intelligence, analytics, python, statistics">
+                    <div class="path-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Science</h3>
+                    <p>Data analysis, machine learning, artificial intelligence, and business intelligence.</p>
+                    <ul class="path-skills">
+                        <li>Statistics & Mathematics</li>
+                        <li>Machine Learning</li>
+                        <li>Data Visualization</li>
+                        <li>Big Data Technologies</li>
+                    </ul>
+                    <button class="btn-primary">Start This Path</button>
+                </div>
+
+                <div class="path-card" data-path="design" data-keywords="design, ux, ui, user experience, user interface, figma, prototyping">
+                    <div class="path-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design & UX</h3>
+                    <p>User experience design, user interface design, and product design.</p>
+                    <ul class="path-skills">
+                        <li>Design Tools</li>
+                        <li>User Research</li>
+                        <li>Prototyping</li>
+                        <li>Visual Design</li>
+                    </ul>
+                    <button class="btn-primary">Start This Path</button>
+                </div>
+
+                <div class="path-card" data-path="product" data-keywords="product management, product strategy, agile, project management, business analysis">
+                    <div class="path-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Product Management</h3>
+                    <p>Product strategy, project management, and business development.</p>
+                    <ul class="path-skills">
+                        <li>Product Strategy</li>
+                        <li>Agile Methodologies</li>
+                        <li>Market Analysis</li>
+                        <li>Stakeholder Management</li>
+                    </ul>
+                    <button class="btn-primary">Start This Path</button>
+                </div>
+
+                <div class="path-card" data-path="marketing" data-keywords="digital marketing, marketing, social media, seo, content marketing, advertising">
+                    <div class="path-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Online marketing, social media, content creation, and brand management.</p>
+                    <ul class="path-skills">
+                        <li>SEO & SEM</li>
+                        <li>Social Media Marketing</li>
+                        <li>Content Strategy</li>
+                        <li>Analytics & Reporting</li>
+                    </ul>
+                    <button class="btn-primary">Start This Path</button>
+                </div>
+
+                <div class="path-card" data-path="cybersecurity" data-keywords="cybersecurity, security, information security, network security, ethical hacking, penetration testing">
+                    <div class="path-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Information security, network security, and ethical hacking.</p>
+                    <ul class="path-skills">
+                        <li>Security Protocols</li>
+                        <li>Penetration Testing</li>
+                        <li>Risk Assessment</li>
+                        <li>Compliance & Governance</li>
+                    </ul>
+                    <button class="btn-primary">Start This Path</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Recommended Books</h3>
+                    <p>Curated list of essential books for each career path, recommended by successful alumni.</p>
+                    <button class="btn-secondary">View Books</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Online Courses</h3>
+                    <p>Hand-picked online courses and tutorials to accelerate your learning journey.</p>
+                    <button class="btn-secondary">Browse Courses</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Software</h3>
+                    <p>Essential tools and software you'll need to master for your chosen career path.</p>
+                    <button class="btn-secondary">Explore Tools</button>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Mentorship Program</h3>
+                    <p>Connect with alumni mentors who can guide you through your career development.</p>
+                    <button class="btn-secondary">Find Mentor</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AlumniConnect</h3>
+                    <p>Bridging the gap between students and alumni for a brighter future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="aluminiconnect.html">Alumni Connect</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="internships.html">Internships</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AlumniConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                    <button class="tab-btn" onclick="switchTab('register')">Register</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="loginForm" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Login</button>
+                    </form>
+                    <p class="auth-switch">Don't have an account? <a href="#" onclick="switchTab('register')">Register here</a></p>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="auth-form">
+                    <h2>Create Account</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="regName">Full Name</label>
+                            <input type="text" id="regName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail">Email</label>
+                            <input type="email" id="regEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Password</label>
+                            <input type="password" id="regPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regConfirmPassword">Confirm Password</label>
+                            <input type="password" id="regConfirmPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">I am a:</label>
+                            <select id="userType" required>
+                                <option value="">Select</option>
+                                <option value="student">Student</option>
+                                <option value="alumni">Alumni</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Register</button>
+                    </form>
+                    <p class="auth-switch">Already have an account? <a href="#" onclick="switchTab('login')">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/auth.js"></script>
+</body>
+</html>

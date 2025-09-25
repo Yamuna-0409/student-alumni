@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internships | Student-Alumni Platform</title>
+    <link rel="stylesheet" href="../assests/css/style.css" />
+    <link rel="stylesheet" href="../assests/css/components.css" />
+    <link rel="stylesheet" href="../assests/css/responsive.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./auth.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>
+            <a href="alumhome.html" style="color: white; text-decoration: none"
+              >AlumniConnect</a
+            >
+          </h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="aluminiconnect.html" class="nav-link">Alumni Connect</a>
+          </li>
+          <li class="nav-item">
+            <a href="roadmap.html" class="nav-link">Roadmap</a>
+          </li>
+          <li class="nav-item">
+            <a href="internships.html" class="nav-link">Internships</a>
+          </li>
+          <li class="nav-item">
+            <a href="courses.html" class="nav-link">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a href="aluminidata.html" class="nav-link">Top Alumni</a>
+          </li>
+          <li class="nav-item">
+            <button class="auth-btn" onclick="openAuthModal()">
+              Login/Register
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <div class="page-header-text">
+            <h1>Internship Opportunities</h1>
+            <p>
+              Discover amazing internship opportunities shared by our alumni
+              network
+            </p>
+          </div>
+          <a href="alumhome.html" class="btn-home">
+            <i class="fas fa-home"></i> Return to Home
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-container">
+          <div class="search-bar">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search internships by company, role, or location..."
+            />
+            <button class="search-btn">
+              <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="paid">Paid</button>
+            <button class="filter-tab" data-filter="remote">Remote</button>
+            <button class="filter-tab" data-filter="summer">Summer</button>
+            <button class="filter-tab" data-filter="part-time">
+              Part-time
+            </button>
+            <button class="filter-tab" data-filter="full-time">
+              Full-time
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internships Grid -->
+    <section class="internships-section">
+      <div class="container">
+        <div class="internships-grid" id="internshipsGrid">
+          <!-- Internship cards will be populated by JavaScript -->
+          <div class="internship-card" data-type="paid" data-location="remote">
+            <div class="internship-header">
+              <div>
+                <h3 class="internship-title">Software Engineering Intern</h3>
+                <p class="internship-company">Google</p>
+              </div>
+              <span class="internship-type">Paid</span>
+            </div>
+            <div class="internship-details">
+              <div class="internship-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Remote / Mountain View, CA</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-clock"></i>
+                <span>Full-time, 12 weeks</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-calendar"></i>
+                <span>Summer 2024</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-dollar-sign"></i>
+                <span>$7,000/month</span>
+              </div>
+            </div>
+            <p class="internship-description">
+              Join our engineering team to work on cutting-edge projects. You'll
+              collaborate with senior engineers on real products used by
+              billions of users worldwide. Perfect opportunity to learn and
+              grow!
+            </p>
+            <div class="internship-requirements">
+              <h4 class="requirements-title">Requirements:</h4>
+              <ul class="requirements-list">
+                <li>Currently pursuing Computer Science or related field</li>
+                <li>Proficiency in at least one programming language</li>
+                <li>Strong problem-solving skills</li>
+                <li>Previous project experience preferred</li>
+              </ul>
+            </div>
+            <div class="internship-actions">
+              <a href="https://www.linkedin.com/feed/"
+                ><button class="btn-apply">Apply Now</button></a
+              >
+              <button class="btn-save">Save</button>
+            </div>
+          </div>
+
+          <div class="internship-card" data-type="paid" data-location="onsite">
+            <div class="internship-header">
+              <div>
+                <h3 class="internship-title">Product Management Intern</h3>
+                <p class="internship-company">Microsoft</p>
+              </div>
+              <span class="internship-type">Paid</span>
+            </div>
+            <div class="internship-details">
+              <div class="internship-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Seattle, WA</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-clock"></i>
+                <span>Full-time, 10 weeks</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-calendar"></i>
+                <span>Summer 2024</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-dollar-sign"></i>
+                <span>$6,500/month</span>
+              </div>
+            </div>
+            <p class="internship-description">
+              Work closely with product managers to define product strategy,
+              analyze user data, and contribute to product roadmap decisions.
+              Great opportunity to understand the business side of technology.
+            </p>
+            <div class="internship-requirements">
+              <h4 class="requirements-title">Requirements:</h4>
+              <ul class="requirements-list">
+                <li>Business, Engineering, or related field</li>
+                <li>Strong analytical and communication skills</li>
+                <li>Experience with data analysis tools</li>
+                <li>Interest in technology products</li>
+              </ul>
+            </div>
+            <div class="internship-actions">
+              <a href="https://www.linkedin.com/feed/"
+                ><button class="btn-apply">Apply Now</button></a
+              >
+              <button class="btn-save">Save</button>
+            </div>
+          </div>
+
+          <div class="internship-card" data-type="paid" data-location="remote">
+            <div class="internship-header">
+              <div>
+                <h3 class="internship-title">Data Science Intern</h3>
+                <p class="internship-company">Amazon</p>
+              </div>
+              <span class="internship-type">Paid</span>
+            </div>
+            <div class="internship-details">
+              <div class="internship-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Remote / Seattle, WA</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-clock"></i>
+                <span>Full-time, 12 weeks</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-calendar"></i>
+                <span>Summer 2024</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-dollar-sign"></i>
+                <span>$6,800/month</span>
+              </div>
+            </div>
+            <p class="internship-description">
+              Analyze large datasets to extract insights and build machine
+              learning models. Work on projects that impact millions of
+              customers and drive business decisions.
+            </p>
+            <div class="internship-requirements">
+              <h4 class="requirements-title">Requirements:</h4>
+              <ul class="requirements-list">
+                <li>Statistics, Mathematics, or Computer Science</li>
+                <li>Python or R programming experience</li>
+                <li>Machine learning coursework or projects</li>
+                <li>SQL knowledge preferred</li>
+              </ul>
+            </div>
+            <div class="internship-actions">
+              <a href="https://www.linkedin.com/feed/"
+                ><button class="btn-apply">Apply Now</button></a
+              >
+              <button class="btn-save">Save</button>
+            </div>
+          </div>
+
+          <div
+            class="internship-card"
+            data-type="unpaid"
+            data-location="onsite"
+          >
+            <div class="internship-header">
+              <div>
+                <h3 class="internship-title">UX Design Intern</h3>
+                <p class="internship-company">Apple</p>
+              </div>
+              <span class="internship-type">Unpaid</span>
+            </div>
+            <div class="internship-details">
+              <div class="internship-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Cupertino, CA</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-clock"></i>
+                <span>Part-time, 16 weeks</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-calendar"></i>
+                <span>Fall 2024</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Academic Credit</span>
+              </div>
+            </div>
+            <p class="internship-description">
+              Work with our design team to create beautiful, intuitive user
+              experiences. Contribute to design systems and user research
+              projects that shape the future of Apple products.
+            </p>
+            <div class="internship-requirements">
+              <h4 class="requirements-title">Requirements:</h4>
+              <ul class="requirements-list">
+                <li>Design, HCI, or related field</li>
+                <li>Portfolio demonstrating design skills</li>
+                <li>Figma or Sketch experience</li>
+                <li>Understanding of user-centered design</li>
+              </ul>
+            </div>
+            <div class="internship-actions">
+              <div class="internship-actions">
+              <a href="https://www.linkedin.com/feed/"
+                ><button class="btn-apply">Apply Now</button></a
+              >
+              <button class="btn-save">Save</button>
+            </div>
+          </div>
+
+          <div class="internship-card" data-type="paid" data-location="remote">
+            <div class="internship-header">
+              <div>
+                <h3 class="internship-title">Marketing Intern</h3>
+                <p class="internship-company">Netflix</p>
+              </div>
+              <span class="internship-type">Paid</span>
+            </div>
+            <div class="internship-details">
+              <div class="internship-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Remote / Los Gatos, CA</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-clock"></i>
+                <span>Part-time, 20 weeks</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-calendar"></i>
+                <span>Academic Year 2024-25</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-dollar-sign"></i>
+                <span>$4,000/month</span>
+              </div>
+            </div>
+            <p class="internship-description">
+              Support marketing campaigns for original content and platform
+              features. Work on social media strategy, content creation, and
+              campaign analytics.
+            </p>
+            <div class="internship-requirements">
+              <h4 class="requirements-title">Requirements:</h4>
+              <ul class="requirements-list">
+                <li>Marketing, Communications, or related field</li>
+                <li>Social media experience</li>
+                <li>Creative writing skills</li>
+                <li>Analytics tools knowledge preferred</li>
+              </ul>
+            </div>
+            <div class="internship-actions">
+              <button class="btn-apply">Apply Now</button>
+              <button class="btn-save">Save</button>
+            </div>
+          </div>
+
+          <div class="internship-card" data-type="paid" data-location="onsite">
+            <div class="internship-header">
+              <div>
+                <h3 class="internship-title">Cybersecurity Intern</h3>
+                <p class="internship-company">IBM</p>
+              </div>
+              <span class="internship-type">Paid</span>
+            </div>
+            <div class="internship-details">
+              <div class="internship-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Armonk, NY</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-clock"></i>
+                <span>Full-time, 12 weeks</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-calendar"></i>
+                <span>Summer 2024</span>
+              </div>
+              <div class="internship-detail">
+                <i class="fas fa-dollar-sign"></i>
+                <span>$5,500/month</span>
+              </div>
+            </div>
+            <p class="internship-description">
+              Work with our security team to identify vulnerabilities, conduct
+              penetration testing, and develop security solutions. Learn from
+              industry experts in cybersecurity.
+            </p>
+            <div class="internship-requirements">
+              <h4 class="requirements-title">Requirements:</h4>
+              <ul class="requirements-list">
+                <li>Computer Science or Cybersecurity</li>
+                <li>Understanding of security concepts</li>
+                <li>Programming experience</li>
+                <li>Network security knowledge preferred</li>
+              </ul>
+            </div>
+            <div class="internship-actions">
+              <button class="btn-apply">Apply Now</button>
+              <button class="btn-save">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Tips Section -->
+    <section class="tips-section">
+      <div class="container">
+        <h2 class="section-title">Application Tips from Alumni</h2>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <div class="tip-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>Resume & Portfolio</h3>
+            <p>
+              Tailor your resume for each application. Include relevant projects
+              and quantify your achievements. For design/development roles,
+              maintain an updated portfolio.
+            </p>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Cover Letter</h3>
+            <p>
+              Write a compelling cover letter that shows your passion for the
+              company and role. Research the company culture and mention
+              specific aspects that excite you.
+            </p>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Network & Connect</h3>
+            <p>
+              Reach out to alumni at the company before applying. They can
+              provide insights about the role and potentially refer you for the
+              position.
+            </p>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Apply Early</h3>
+            <p>
+              Many internships have rolling applications. Apply as soon as
+              possible to increase your chances of being considered for the
+              position.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>AlumniConnect</h3>
+            <p>
+              Bridging the gap between students and alumni for a brighter
+              future.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="aluminiconnect.html">Alumni Connect</a></li>
+              <li><a href="roadmap.html">Roadmap</a></li>
+              <li><a href="internship.html">Internships</a></li>
+              <li><a href="courses.html">Courses</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 AlumniConnect. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeAuthModal()">&times;</span>
+        <div class="auth-container">
+          <div class="auth-tabs">
+            <button class="tab-btn active" onclick="switchTab('login')">
+              Login
+            </button>
+            <button class="tab-btn" onclick="switchTab('register')">
+              Register
+            </button>
+          </div>
+
+          <!-- Login Form -->
+          <div id="loginForm" class="auth-form active">
+            <h2>Welcome Back</h2>
+            <form>
+              <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" required />
+              </div>
+              <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" required />
+              </div>
+              <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <p class="auth-switch">
+              Don't have an account?
+              <a href="#" onclick="switchTab('register')">Register here</a>
+            </p>
+          </div>
+
+          <!-- Register Form -->
+          <div id="registerForm" class="auth-form">
+            <h2>Create Account</h2>
+            <form>
+              <div class="form-group">
+                <label for="regName">Full Name</label>
+                <input type="text" id="regName" required />
+              </div>
+              <div class="form-group">
+                <label for="regEmail">Email</label>
+                <input type="email" id="regEmail" required />
+              </div>
+              <div class="form-group">
+                <label for="regPassword">Password</label>
+                <input type="password" id="regPassword" required />
+              </div>
+              <div class="form-group">
+                <label for="regConfirmPassword">Confirm Password</label>
+                <input type="password" id="regConfirmPassword" required />
+              </div>
+              <div class="form-group">
+                <label for="userType">I am a:</label>
+                <select id="userType" required>
+                  <option value="">Select</option>
+                  <option value="student">Student</option>
+                  <option value="alumni">Alumni</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-primary">Register</button>
+            </form>
+            <p class="auth-switch">
+              Already have an account?
+              <a href="#" onclick="switchTab('login')">Login here</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./auth.js"></script>
+  </body>
+</html>

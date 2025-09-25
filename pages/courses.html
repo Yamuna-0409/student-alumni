@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Student-Alumni Platform</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <link rel="stylesheet" href="../assests/css/components.css">
+    <link rel="stylesheet" href="../assests/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./auth.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="alumhome.html" style="color: white; text-decoration: none;">AlumniConnect</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="aluminiconnect.html" class="nav-link">Alumni Connect</a>
+                </li>
+                <li class="nav-item">
+                    <a href="roadmap.html" class="nav-link">Roadmap</a>
+                </li>
+                <li class="nav-item">
+                    <a href="internship.html" class="nav-link">Internships</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aluminidata.html" class="nav-link">Top Alumni</a>
+                </li>
+                <li class="nav-item">
+                    <button class="auth-btn" onclick="openAuthModal()">Login/Register</button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-header-text">
+                    <h1>Learning Courses</h1>
+                    <p>Enhance your skills with courses recommended by successful alumni</p>
+                </div>
+                <a href="alumhome.html" class="btn-home">
+                    <i class="fas fa-home"></i> Return to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search courses by title, instructor, or topic...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="programming">Programming</button>
+                    <button class="filter-tab" data-filter="design">Design</button>
+                    <button class="filter-tab" data-filter="business">Business</button>
+                    <button class="filter-tab" data-filter="data-science">Data Science</button>
+                    <button class="filter-tab" data-filter="free">Free</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Course cards will be populated by JavaScript -->
+                <div class="course-card" data-category="programming">
+                    <div class="course-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Complete Web Development Bootcamp</h3>
+                        <p class="course-instructor">Dr. Sarah Johnson (Google)</p>
+                        <p class="course-duration">12 weeks • 8 hours/week</p>
+                        <p class="course-description">
+                            Master full-stack web development with HTML, CSS, JavaScript, React, Node.js, and MongoDB. 
+                            Build real-world projects and get job-ready skills.
+                        </p>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (1,234 reviews)</span>
+                            </div>
+                           
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-enroll">Enroll Now</button>
+                          <a href="https://www.w3schools.com/" <button herf class="btn-preview">Preview</button> <
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="data-science">
+                    <div class="course-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Machine Learning Fundamentals</h3>
+                        <p class="course-instructor">Prof. Michael Chen (Microsoft)</p>
+                        <p class="course-duration">10 weeks • 6 hours/week</p>
+                        <p class="course-description">
+                            Learn machine learning algorithms, data preprocessing, model evaluation, and deployment. 
+                            Hands-on projects with real datasets.
+                        </p>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (856 reviews)</span>
+                            </div>
+                            <div class="course-price">$249</div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-enroll">Enroll free</button>
+                            <button class="btn-preview">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="design">
+                    <div class="course-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">UX/UI Design Masterclass</h3>
+                        <p class="course-instructor">Emily Rodriguez (Apple)</p>
+                        <p class="course-duration">8 weeks • 5 hours/week</p>
+                        <p class="course-description">
+                            Master user experience and interface design principles. Learn Figma, user research, 
+                            prototyping, and design systems.
+                        </p>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (642 reviews)</span>
+                            </div>
+                          
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-enroll">Enroll free</button>
+                            <button class="btn-preview">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="business">
+                    <div class="course-image">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Product Management Essentials</h3>
+                        <p class="course-instructor">David Kim (Amazon)</p>
+                        <p class="course-duration">6 weeks • 4 hours/week</p>
+                        <p class="course-description">
+                            Learn product strategy, roadmap planning, stakeholder management, and agile methodologies. 
+                            Perfect for aspiring product managers.
+                        </p>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.7 (423 reviews)</span>
+                            </div>
+                            
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-enroll">Enroll free</button>
+                            <button class="btn-preview">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="programming" data-free="true">
+                    <div class="course-image">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Python for Beginners</h3>
+                        <p class="course-instructor">Lisa Wang (Netflix)</p>
+                        <p class="course-duration">4 weeks • 3 hours/week</p>
+                        <p class="course-description">
+                            Learn Python programming from scratch. Cover variables, functions, loops, data structures, 
+                            and basic algorithms. Perfect for beginners.
+                        </p>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (2,156 reviews)</span>
+                            </div>
+                            <div class="course-price">Free</div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-enroll">Enroll Now</button>
+                            <button class="btn-preview">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="data-science">
+                    <div class="course-image">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Data Analysis with SQL</h3>
+                        <p class="course-instructor">Alex Thompson (IBM)</p>
+                        <p class="course-duration">6 weeks • 4 hours/week</p>
+                        <p class="course-description">
+                            Master SQL for data analysis. Learn complex queries, data manipulation, and database 
+                            optimization techniques used in industry.
+                        </p>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.6 (789 reviews)</span>
+                            </div>
+                            <div class="course-price">$149</div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-enroll">Enroll free</button>
+                            <button class="btn-preview">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="design" data-free="true">
+                    <div class="course-image">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Graphic Design Basics</h3>
+                        <p class="course-instructor">Maria Garcia (Adobe)</p>
+                        <p class="course-duration">3 weeks • 2 hours/week</p>
+                        <p class="course-description">
+                            Learn fundamental graphic design principles, color theory, typography, and layout design. 
+                            Create your first design portfolio.
+                        </p>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.7 (1,432 reviews)</span>
+                            </div>
+                            <div class="course-price">Free</div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-enroll">Enroll Now</button>
+                            <button class="btn-preview">Preview</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="business">
+                    <div class="course-image">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Digital Marketing Strategy</h3>
+                        <p class="course-instructor">James Wilson (Meta)</p>
+                        <p class="course-duration">8 weeks • 5 hours/week</p>
+                        <p class="course-description">
+                            Master digital marketing channels, analytics, SEO, social media marketing, and campaign 
+                            optimization. Build your marketing skills.
+                        </p>
+                        <div class="course-meta">
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.5 (567 reviews)</span>
+                            </div>
+                            <div class="course-price">$219</div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn-enroll">Enroll Now</button>
+                            <button class="btn-preview">Preview</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Paths Section -->
+    <section class="learning-paths">
+        <div class="container">
+            <h2 class="section-title">Structured Learning Paths</h2>
+            <div class="paths-grid">
+                <div class="path-card">
+                    <div class="path-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Full-Stack Developer</h3>
+                    <p>Complete path to become a full-stack developer</p>
+                    <ul class="path-courses">
+                        <li>HTML & CSS Fundamentals</li>
+                        <li>JavaScript Deep Dive</li>
+                        <li>React & Redux</li>
+                        <li>Node.js & Express</li>
+                        <li>Database Design</li>
+                        <li>Deployment & DevOps</li>
+                    </ul>
+                    <div class="path-meta">
+                        <span class="path-duration">6 months</span>
+                        <span class="path-price">$1,299</span>
+                    </div>
+                    <button class="btn-primary">Start Path</button>
+                </div>
+
+                <div class="path-card">
+                    <div class="path-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Scientist</h3>
+                    <p>Master data science and machine learning</p>
+                    <ul class="path-courses">
+                        <li>Python for Data Science</li>
+                        <li>Statistics & Probability</li>
+                        <li>Data Visualization</li>
+                        <li>Machine Learning</li>
+                        <li>Deep Learning</li>
+                        <li>Big Data Technologies</li>
+                    </ul>
+                    <div class="path-meta">
+                        <span class="path-duration">8 months</span>
+                        <span class="path-price">$1,499</span>
+                    </div>
+                    <button class="btn-primary">Start Path</button>
+                </div>
+
+                <div class="path-card">
+                    <div class="path-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UX/UI Designer</h3>
+                    <p>Become a professional designer</p>
+                    <ul class="path-courses">
+                        <li>Design Principles</li>
+                        <li>User Research</li>
+                        <li>Wireframing & Prototyping</li>
+                        <li>Figma Mastery</li>
+                        <li>Design Systems</li>
+                        <li>Portfolio Development</li>
+                    </ul>
+                    <div class="path-meta">
+                        <span class="path-duration">5 months</span>
+                        <span class="path-price">$999</span>
+                    </div>
+                    <button class="btn-primary">Start Path</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">Student Success Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-content">
+                        <p>"The web development course helped me land my dream job at Google. The hands-on projects 
+                        and alumni mentorship were invaluable."</p>
+                        <div class="story-author">
+                            <div class="author-info">
+                                <h4>Sarah Martinez</h4>
+                                <p>Software Engineer at Google</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <p>"The data science path gave me the skills to transition from marketing to data science. 
+                        Now I'm working as a Data Scientist at Microsoft."</p>
+                        <div class="story-author">
+                            <div class="author-info">
+                                <h4>John Chen</h4>
+                                <p>Data Scientist at Microsoft</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-card">
+                    <div class="story-content">
+                        <p>"The UX design course portfolio helped me get multiple job offers. The alumni network 
+                        provided great career guidance throughout my journey."</p>
+                        <div class="story-author">
+                            <div class="author-info">
+                                <h4>Emily Davis</h4>
+                                <p>UX Designer at Apple</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AlumniConnect</h3>
+                    <p>Bridging the gap between students and alumni for a brighter future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="aluminiconnect.html">Alumni Connect</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="internship.html">Internships</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AlumniConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                    <button class="tab-btn" onclick="switchTab('register')">Register</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="loginForm" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Login</button>
+                    </form>
+                    <p class="auth-switch">Don't have an account? <a href="#" onclick="switchTab('register')">Register here</a></p>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="auth-form">
+                    <h2>Create Account</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="regName">Full Name</label>
+                            <input type="text" id="regName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail">Email</label>
+                            <input type="email" id="regEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Password</label>
+                            <input type="password" id="regPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regConfirmPassword">Confirm Password</label>
+                            <input type="password" id="regConfirmPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">I am a:</label>
+                            <select id="userType" required>
+                                <option value="">Select</option>
+                                <option value="student">Student</option>
+                                <option value="alumni">Alumni</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Register</button>
+                    </form>
+                    <p class="auth-switch">Already have an account? <a href="#" onclick="switchTab('login')">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/auth.js"></script>
+    <script src="../assets/js/interactions.js"></script>
+</body>
+</html>

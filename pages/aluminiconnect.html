@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Connect | Student-Alumni Platform</title>
+    <link rel="stylesheet" href="../assests/css/style.css">
+    <link rel="stylesheet" href="../assests/css/components.css">
+    <link rel="stylesheet" href="../assests/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./auth.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="alumhome.html" style="color: white; text-decoration: none;">AlumniConnect</a></h2>
+            </div>
+<ul class="nav-menu">
+    <li class="nav-item">
+        <a href="aluminiconnect.html" class="nav-link">Alumni Connect</a>
+    </li>
+    <li class="nav-item">
+        <a href="roadmap.html" class="nav-link">Roadmap</a>
+    </li>
+    <li class="nav-item">
+        <a href="internship.html" class="nav-link">Internships</a>
+    </li>
+    <li class="nav-item">
+        <a href="courses.html" class="nav-link">Courses</a>
+    </li>
+    <li class="nav-item">
+        <a href="aluminidata.html" class="nav-link">Top Alumni</a>
+    </li>
+    <li class="nav-item">
+        <button class="auth-btn" onclick="openAuthModal()">Login/Register</button>
+    </li>
+</ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <div class="page-header-text">
+                    <h1>Connect with Alumni</h1>
+                    <p>Find and connect with successful alumni from your field of interest</p>
+                </div>
+                <a href="alumhome.html" class="btn-home">
+                    <i class="fas fa-home"></i> Return to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search alumni by name, company, or skills...">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="technology">Technology</button>
+                    <button class="filter-tab" data-filter="business">Business</button>
+                    <button class="filter-tab" data-filter="engineering">Engineering</button>
+                    <button class="filter-tab" data-filter="design">Design</button>
+                    <button class="filter-tab" data-filter="marketing">Marketing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alumni Grid -->
+    <section class="alumni-section">
+        <div class="container">
+            <div class="alumni-grid" id="alumniGrid">
+                <!-- Alumni cards will be populated by JavaScript -->
+                <div class="alumni-card" data-category="technology">
+                    <div class="alumni-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="alumni-info">
+                        <h3 class="alumni-name">Sarah Johnson</h3>
+                        <p class="alumni-title">Senior Software Engineer</p>
+                        <p class="alumni-company">Google</p>
+                        <div class="alumni-skills">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alumni-card" data-category="business">
+                    <div class="alumni-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="alumni-info">
+                        <h3 class="alumni-name">Michael Chen</h3>
+                        <p class="alumni-title">Product Manager</p>
+                        <p class="alumni-company">Microsoft</p>
+                        <div class="alumni-skills">
+                            <span class="skill-tag">Product Strategy</span>
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">Analytics</span>
+                            <span class="skill-tag">Leadership</span>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alumni-card" data-category="engineering">
+                    <div class="alumni-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="alumni-info">
+                        <h3 class="alumni-name">Emily Rodriguez</h3>
+                        <p class="alumni-title">Data Scientist</p>
+                        <p class="alumni-company">Amazon</p>
+                        <div class="alumni-skills">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Statistics</span>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alumni-card" data-category="design">
+                    <div class="alumni-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="alumni-info">
+                        <h3 class="alumni-name">David Kim</h3>
+                        <p class="alumni-title">UX Designer</p>
+                        <p class="alumni-company">Apple</p>
+                        <div class="alumni-skills">
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Prototyping</span>
+                            <span class="skill-tag">User Research</span>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alumni-card" data-category="marketing">
+                    <div class="alumni-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="alumni-info">
+                        <h3 class="alumni-name">Lisa Wang</h3>
+                        <p class="alumni-title">Marketing Director</p>
+                        <p class="alumni-company">Netflix</p>
+                        <div class="alumni-skills">
+                            <span class="skill-tag">Digital Marketing</span>
+                            <span class="skill-tag">Brand Strategy</span>
+                            <span class="skill-tag">Social Media</span>
+                            <span class="skill-tag">Analytics</span>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alumni-card" data-category="technology">
+                    <div class="alumni-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="alumni-info">
+                        <h3 class="alumni-name">Alex Thompson</h3>
+                        <p class="alumni-title">DevOps Engineer</p>
+                        <p class="alumni-company">Netflix</p>
+                        <div class="alumni-skills">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">CI/CD</span>
+                        </div>
+                        <div class="alumni-actions">
+                            <button class="btn-connect">Connect</button>
+                            <button class="btn-message">Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AlumniConnect</h3>
+                    <p>Bridging the gap between students and alumni for a brighter future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="aluminiconnect.html">Alumni Connect</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="internship.html">Internships</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AlumniConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                    <button class="tab-btn" onclick="switchTab('register')">Register</button>
+                </div>
+                
+                <!-- Login Form -->
+                <div id="loginForm" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Login</button>
+                    </form>
+                    <p class="auth-switch">Don't have an account? <a href="#" onclick="switchTab('register')">Register here</a></p>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="auth-form">
+                    <h2>Create Account</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="regName">Full Name</label>
+                            <input type="text" id="regName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail">Email</label>
+                            <input type="email" id="regEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Password</label>
+                            <input type="password" id="regPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regConfirmPassword">Confirm Password</label>
+                            <input type="password" id="regConfirmPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">I am a:</label>
+                            <select id="userType" required>
+                                <option value="">Select</option>
+                                <option value="student">Student</option>
+                                <option value="alumni">Alumni</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Register</button>
+                    </form>
+                    <p class="auth-switch">Already have an account? <a href="#" onclick="switchTab('login')">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./auth.js"></script>
+</body>
+</html>
